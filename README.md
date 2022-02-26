@@ -35,8 +35,9 @@ https://kovan.etherscan.io/address/0x3Bb1095425d2d10D3945d60C11a761F9e3F74091
 ---
 
 * 编写一个测试用例
-<br clear="left"/>
-详见： ![w1_1_code](https://github.com/hejiujun/ok-training/tree/main/w1_1_code)
+* 详见：
+
+- [w1_1_code](https://github.com/hejiujun/ok-training/tree/main/w1_1_code)
 
 ---
 
@@ -45,5 +46,8 @@ https://kovan.etherscan.io/address/0x3Bb1095425d2d10D3945d60C11a761F9e3F74091
 * 使用Hardhat部署修改后的Counter
 * 使用Hardhat测试Counter
 * 写一个脚本调用count()
-<br clear="left"/>
-详见： ![w1_2_code](https://github.com/hejiujun/ok-training/tree/main/w1_2_code)
+* 详见：
+
+- [w1_2_code](https://github.com/hejiujun/ok-training/tree/main/w1_2_code)
+
+---
