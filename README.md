@@ -51,3 +51,25 @@ https://kovan.etherscan.io/address/0x3Bb1095425d2d10D3945d60C11a761F9e3F74091
 - [w1_2_code](https://github.com/hejiujun/ok-training/tree/main/w1_2_code)
 
 ---
+
+## W2-1作业
+
+* 编写一个Bank合约
+* 通过Metamask向Bank合约转账ETH
+* 在Bank合约记录每个地址转账金额
+* 编写Bank合约withdraw(),实现提取出所有的ETH
+
+-[w2_1_code](https://github.com/hejiujun/ok-training/tree/main/w2_1_code)
+
+---
+
+## W2-2作业
+
+* 编写合约Score，用于纪录学生（地址）分数
+* 仅有老师（用modifier权限控制）可以添加和修改学生分数
+* 分数不可以大于100
+* 编写合约Teacher作为老师，通过IScore接口调用修改学生分数
+
+-[w2_2_code](https://github.com/hejiujun/ok-training/tree/main/w2_2_code)
+
+---
