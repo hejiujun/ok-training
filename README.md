@@ -73,3 +73,59 @@ https://kovan.etherscan.io/address/0x3Bb1095425d2d10D3945d60C11a761F9e3F74091
 - [w2_2_code](https://github.com/hejiujun/ok-training/tree/main/w2_2_code)
 
 ---
+
+## W3-1作业
+
+* 发行一个ERC20 Token
+* 可动态增发（起始发行量是0）
+* 通过ethers.js调用合约进行转账
+
+<p align="center">
+  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1646970788986.jpg">
+</p>
+
+<p align="center">
+  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1646970834515.jpg">
+</p>
+
+* 编写一个Vault合约
+* 编写deposite方法，实现ERC20存入Vault，并记录每个用户存款金额，从前端调用（Approve，transferFrom）
+* 编写withdraw方法，提取用户自己的存款（前端调用）
+* 前端显示用户存款金额
+
+<p align="center">
+  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1647025885635.jpg">
+</p>
+
+<p align="center">
+  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1647025951764.jpg">
+</p>
+
+<p align="center">
+  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1647025995473.jpg">
+</p>
+
+<p align="center">
+  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1647026034150.jpg">
+</p>
+
+
+
+- [w3_1_code](https://github.com/hejiujun/ok-training/tree/main/w3_1_code)
+
+
+
+---
+
+
+## W3_2作业
+
+* 发行一个ERC721 Token
+* 使用ethers.js解析ERC721转账事件（加分项：记录到数据库中，可方便查询用户持有的所有NFT）
+* （或）使用TheGraph解析ERC721转账事件
+
+
+- [w3_2_code](https://github.com/hejiujun/ok-training/tree/main/w3_2_code)
+
+---
+
