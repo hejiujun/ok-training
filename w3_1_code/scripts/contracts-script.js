@@ -8,7 +8,7 @@ async function main() {
   await tenmile.deployed();
 
   console.log("Tenmile deployed to:", tenmile.address);
-  await writeAddr(tenmile.address, "Tenmile", network.name)
+  await writeAddr(tenmile.address, "Tenmile", network.name);
 
   const Coronation = await hre.ethers.getContractFactory("Coronation");
   const coronation = await Coronation.deploy();
@@ -16,7 +16,7 @@ async function main() {
   await coronation.deployed();
 
   console.log("Coronation deployed to:", coronation.address);
-  await writeAddr(coronation.address, "Coronation", network.name)
+  await writeAddr(coronation.address, "Coronation", network.name);
 
   const Vault = await hre.ethers.getContractFactory("Vault");
   const vault = await Vault.deploy(coronation.address);
@@ -24,7 +24,7 @@ async function main() {
   await vault.deployed();
 
   console.log("Vault deployed to:", vault.address);
-  await writeAddr(vault.address, "Vault", network.name)
+  await writeAddr(vault.address, "Vault", network.name);
 
 }
 
