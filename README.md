@@ -125,6 +125,11 @@ https://kovan.etherscan.io/address/0x3Bb1095425d2d10D3945d60C11a761F9e3F74091
 * （或）使用TheGraph解析ERC721转账事件
 
 
+<p align="center">
+  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1647077431252.jpg">
+</p>
+
+
 - [w3_2_code](https://github.com/hejiujun/ok-training/tree/main/w3_2_code)
 
 ---
