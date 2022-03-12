@@ -1,9 +1,9 @@
 const { ethers, network } = require("hardhat");
-var mysql = require('mysql');
+let mysql = require('mysql');
 
 const roseAddr = require(`../deployments/${network.name}/Rose.json`)
 
-var connection = mysql.createConnection({
+let connection = mysql.createConnection({
     host     : 'loaclhost',
     user     : 'root',
     password : 'Hlande@2022',
