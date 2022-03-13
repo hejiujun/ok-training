@@ -1,16 +1,7 @@
 const { ethers, network } = require("hardhat");
-let mysql = require('mysql');
-
 const roseAddr = require(`../deployments/${network.name}/Rose.json`)
-
-let connection = mysql.createConnection({
-    host     : 'loaclhost',
-    user     : 'root',
-    password : 'Hlande@2022',
-    database : 'erc_test'
-  });
-
-connection.connect();
+const dbutil = require('./dbutil');
+let connection = null;
 
 async function parseTransferEvent(event) {
     const TransferEvent = new ethers.utils.Interface(["event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)"]);
@@ -18,21 +9,24 @@ async function parseTransferEvent(event) {
     console.log("from:" + decodedData.args.from);
     console.log("to:" + decodedData.args.to);
     console.log("tokenId:" + decodedData.args.tokenId);
-    let from=decodedData.args.from;
-    let to=decodedData.args.to;
-    let tokenId=decodedData.args.tokenId;
-    let sql='INSERT INTO transfer_info (from, to, token_id) VALUES (?, ?, ?)';
-    let array=new Array();
+    let from = decodedData.args.from;
+    let to = decodedData.args.to;
+    let tokenId = decodedData.args.tokenId;
+    let sql = 'INSERT INTO transfer_info (from_addr, to_addr, token_id) VALUES (?, ?, ?)';
+    let array = new Array();
     array.push(from);
     array.push(to);
     array.push(tokenId.toString());
     console.log(array);
-    connection.query(sql,array, (err, results) => {
-        if(err){
+    connection = dbutil.createConnection();
+    connection.connect();
+    connection.query(sql, array, (err, results) => {
+        if (err) {
             console.log(err);
         }
         console.log(results);
     });
+    connection.end();
 }
 
 async function main() {
@@ -55,7 +49,7 @@ async function main() {
 
 main()
 
-connection.end();
+
 
 
 
