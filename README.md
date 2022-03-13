@@ -123,7 +123,17 @@ https://kovan.etherscan.io/address/0x3Bb1095425d2d10D3945d60C11a761F9e3F74091
 * 发行一个ERC721 Token
 * 使用ethers.js解析ERC721转账事件（加分项：记录到数据库中，可方便查询用户持有的所有NFT）
 * （或）使用TheGraph解析ERC721转账事件
+* 测试前先在mysql数据库执行scripts/erc-mysql.sql脚本并确保远程连接数据正常，修改scripts/dbutil.js文件中数据连接配置，测试操作命令如下：
 
+```
+npx hardhat compile
+npx hardhat test --network dev
+npx hardhat run scripts/rose-script.js --network dev
+npx hardhat run scripts/transfer.js --network dev
+npx hardhat run scripts/getlogs.js --network dev
+npx hardhat run scripts/getlogs-mysql.js --network dev
+
+```
 
 <p align="center">
   <img src="https://github.com/hejiujun/ok-training/blob/main/images/1647077431252.jpg">
