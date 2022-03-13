@@ -136,7 +136,10 @@ npx hardhat run scripts/getlogs-mysql.js --network dev
 ```
 
 <p align="center">
-  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1647077431252.jpg">
+  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1647156746145.jpg">
+</p>
+<p align="center">
+  <img src="https://github.com/hejiujun/ok-training/blob/main/images/1647156145884.jpg">
 </p>
 
 
