@@ -147,3 +147,21 @@ npx hardhat run scripts/getlogs-mysql.js --network dev
 
 ---
 
+## W4_1作业
+
+* 部署自己的ERC20合约MyToken
+* 编写合约MyTokenMarket实现：AddLiquidity()函数内部调用UniswapV2Router添加MyToken与ETH的流动性；buyToken()用户可调用该函数实现购买MyToken
+
+- [w4_1_code](https://github.com/hejiujun/ok-training/tree/main/w4_1_code)
+
+---
+
+## W4_2作业
+
+* 在上一次作业的基础上完成代币兑换后，直接质押MasterChef
+* withdraw()从MasterChef提取Token方法
+
+- [w4_2_code](https://github.com/hejiujun/ok-training/tree/main/w4_2_code)
+
+---
+
