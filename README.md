@@ -147,3 +147,40 @@ npx hardhat run scripts/getlogs-mysql.js --network dev
 
 ---
 
+## W4_1作业
+
+* 部署自己的ERC20合约MyToken
+* 编写合约MyTokenMarket实现：AddLiquidity()函数内部调用UniswapV2Router添加MyToken与ETH的流动性；buyToken()用户可调用该函数实现购买MyToken
+
+- [w4_1_code](https://github.com/hejiujun/ok-training/tree/main/w4_1_code)
+
+---
+
+## W4_2作业
+
+* 在上一次作业的基础上完成代币兑换后，直接质押MasterChef
+* withdraw()从MasterChef提取Token方法
+
+- [w4_2_code](https://github.com/hejiujun/ok-training/tree/main/w4_2_code)
+
+---
+
+## W5_1作业
+
+* 以太坊测试网上部署两个自己的ERC20合约，分别在Uniswap V2 V3 （网页上）添加流动性
+* 编写合约执行闪电贷（参考V2的ExampleFlashSwap）uniswapV2Call中用收到的TokenA在Uniswap v3的SwapRouter兑换为TokenB还回到uniswap V2 Pair中
+
+
+- [w5_1_code](https://github.com/hejiujun/ok-training/tree/main/w5_1_code)
+
+---
+
+## W5_2作业
+
+* 在一笔交易中完成（模拟闪电贷交易）在AAVE中借款tokenA，使用TokenA在Uniswap V2 中交易兑换tokenB，然后在Uniswap V3 用tokenB兑换 tokenA，将tokenA还款给AAVE
+
+
+- [w5_2_code](https://github.com/hejiujun/ok-training/tree/main/w5_2_code)
+
+---
+
