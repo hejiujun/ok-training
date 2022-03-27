@@ -165,3 +165,22 @@ npx hardhat run scripts/getlogs-mysql.js --network dev
 
 ---
 
+## W5_1作业
+
+* 以太坊测试网上部署两个自己的ERC20合约，分别在Uniswap V2 V3 （网页上）添加流动性
+* 编写合约执行闪电贷（参考V2的ExampleFlashSwap）uniswapV2Call中用收到的TokenA在Uniswap v3的SwapRouter兑换为TokenB还回到uniswap V2 Pair中
+
+
+- [w5_1_code](https://github.com/hejiujun/ok-training/tree/main/w5_1_code)
+
+---
+
+## W5_2作业
+
+* 在一笔交易中完成（模拟闪电贷交易）在AAVE中借款tokenA，使用TokenA在Uniswap V2 中交易兑换tokenB，然后在Uniswap V3 用tokenB兑换 tokenA，将tokenA还款给AAVE
+
+
+- [w5_2_code](https://github.com/hejiujun/ok-training/tree/main/w5_2_code)
+
+---
+
