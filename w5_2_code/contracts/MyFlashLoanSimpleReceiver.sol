@@ -18,14 +18,20 @@ contract MyFlashLoanSimpleReceiver is FlashLoanSimpleReceiverBase {
     uint24 MEDIUMFREE = 3000;
     address immutable routerV2;
     address immutable routerV3;
+    address immutable tokenBaddr;
+    address immutable myaddr;
 
     constructor(
         IPoolAddressesProvider provider,
         address _routerV2,
-        address _routerV3
+        address _routerV3,
+        address _tokenBaddr,
+        address _myaddr
     ) FlashLoanSimpleReceiverBase(provider) {
         routerV2 = _routerV2;
         routerV3 = _routerV3;
+        tokenBaddr = _tokenBaddr;
+        myaddr=_myaddr;
     }
 
     function executeOperation(
@@ -40,13 +46,8 @@ contract MyFlashLoanSimpleReceiver is FlashLoanSimpleReceiverBase {
             amount <= IERC20(asset).balanceOf(address(this)),
             "Invalid balance for the contract"
         );
-        {
-            address token0 = IUniswapV2Pair(msg.sender).token0();
-            address token1 = IUniswapV2Pair(msg.sender).token1();
-            path[0] = token0;
-            path[1] = token1;
-        }
-        //require(path[0] == asset, "Not a TokenA contract");
+        path[0] = asset;
+        path[1] = tokenBaddr;
         IERC20 tokenA = IERC20(path[0]);
         IERC20 tokenB = IERC20(path[1]);
         uint256 amountRequired = tokenB.balanceOf(address(this));
@@ -77,9 +78,10 @@ contract MyFlashLoanSimpleReceiver is FlashLoanSimpleReceiverBase {
         );
 
         assert(amountOut > amountMin);
-        MintableERC20 token = MintableERC20(asset);
-        uint256 amountToReturn = amountOut.add(premium);
-        token.mint(premium);
+        uint256 profit = amountOut-amount;
+        assert(tokenA.transfer(myaddr, profit));
+
+        uint256 amountToReturn = LowGasSafeMath.add(amount, premium);
         IERC20(asset).approve(address(POOL), amountToReturn);
         return true;
     }
